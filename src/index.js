@@ -1,5 +1,5 @@
-const { performance } = require('perf_hooks')
-const something = require('./something')
+import { performance } from 'perf_hooks'
+import something from './something'
 
 const foo = (n) => n**2
 
