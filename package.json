@@ -4,9 +4,13 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
+		"clean": "rimraf lib/* build/*",
 		"build": "cp src/* build/",
 		"build:lib": "cp libSrc/* lib/",
 		"start": "node build/index.js",
 		"start:lib": "node lib/index.js"
+	},
+	"devDependencies": {
+		"rimraf": "^2.6.3"
 	}
 }
