@@ -3,18 +3,20 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "MIT",
+	"engines": {
+		"node": "8.11.3"
+	},
 	"scripts": {
-		"clean": "rimraf lib/* build/*",
-		"build": "yarn parcel build -d build/ src/index.js",
-		"build:lib": "yarn parcel build -d lib/ libSrc/index.js",
+		"clean": "rimraf lib/* build/* build-check/*",
+		"build-check": "parcel build --target node --out-dir build-check/ --no-minify --log-level 4 --detailed-report --no-cache src/index.js",
+		"build": "parcel build --target node --out-dir build/ src/index.js",
+		"build:lib": "parcel build --target node --out-dir lib/ libSrc/index.js",
 		"start": "node build/index.js",
 		"start:lib": "node lib/index.js"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.3.4",
 		"parcel-bundler": "^1.11.0",
 		"rimraf": "^2.6.3"
-	},
-	"dependencies": {
-		"perf_hooks": "^0.0.1"
 	}
 }

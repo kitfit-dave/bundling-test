@@ -10,3 +10,7 @@ for (var i = 0; i < arr.length; i++) {
 for (let x of [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]) {
 	console.log(something(foo(x)))
 }
+
+const a = { a: 1, b: 2 }
+const b = { ...a, c: 3 }
+const { x, ...rest } = a
