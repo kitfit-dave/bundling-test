@@ -1,7 +1,7 @@
 // "import from perf_hooks" should be require
 import { performance } from 'perf_hooks'
 // "import ./something" should be _interopRequireDefault
-import something from './something'
+import something from '../libSrc/something'
 
 // "foo" should remain fat arrow function, calling "n ** 2"
 const foo = (n) => n**2
