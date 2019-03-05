@@ -1,5 +1,5 @@
 import { performance } from 'perf_hooks'
-import something from './something'
+import something from '../libSrc/something'
 
 const foo = (n) => n**2
 
