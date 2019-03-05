@@ -5,12 +5,16 @@
 	"license": "MIT",
 	"scripts": {
 		"clean": "rimraf lib/* build/*",
-		"build": "cp src/* build/",
-		"build:lib": "cp libSrc/* lib/",
+		"build": "yarn parcel build -d build/ src/index.js",
+		"build:lib": "yarn parcel build -d lib/ libSrc/index.js",
 		"start": "node build/index.js",
 		"start:lib": "node lib/index.js"
 	},
 	"devDependencies": {
+		"parcel-bundler": "^1.11.0",
 		"rimraf": "^2.6.3"
+	},
+	"dependencies": {
+		"perf_hooks": "^0.0.1"
 	}
 }
